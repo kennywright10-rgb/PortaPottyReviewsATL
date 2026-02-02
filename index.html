@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Metro Porta Potty Reviews | Best Portable Restroom Rentals</title>
+    <meta name="description" content="Find the best porta potty rental companies in Atlanta Metro. Read reviews, compare prices, and book portable restrooms for your event or construction site.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        /* Header */
+        header {
+            background-color: #1a3a6b;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #dc143c;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #dc143c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1a3a6b 100%);
+            color: white;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 800px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .search-inputs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-inputs input,
+        .search-inputs select {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .search-inputs input:focus,
+        .search-inputs select:focus {
+            outline: none;
+            border-color: #2c5aa0;
+        }
+
+        .search-btn {
+            background-color: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background-color: #1a3a6b;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        /* City Grid */
+        .cities-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #1a3a6b;
+            text-align: center;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .city-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .city-card h3 {
+            color: #1a3a6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .city-card .company-count {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Companies List */
+        .companies-list {
+            display: none;
+        }
+
+        .companies-list.active {
+            display: block;
+        }
+
+        .company-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .company-info h3 {
+            color: #1a3a6b;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stars {
+            color: #ffa500;
+            font-size: 1.2rem;
+        }
+
+        .review-count {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .company-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-item strong {
+            color: #1a3a6b;
+        }
+
+        .services {
+            margin: 1rem 0;
+        }
+
+        .services h4 {
+            color: #1a3a6b;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .service-tag {
+            background: #e8f0fe;
+            color: #2c5aa0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .reviews-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .review {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            color: #1a3a6b;
+        }
+
+        .review-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .contact-btn {
+            background-color: #dc143c;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background-color: #b01030;
+        }
+
+        .back-btn {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a3a6b;
+            color: white;
+            padding: 3rem 20px 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #2c5aa0;
+            color: #ccc;
+        }
+
+        .admin-link {
+            color: #1a3a6b;
+            font-size: 0.7rem;
+            text-decoration: none;
+            opacity: 0.3;
+        }
+
+        /* Admin Panel Styles */
+        .admin-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .admin-modal.active {
+            display: block;
+        }
+
+        .admin-content {
+            max-width: 1400px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #1a3a6b;
+        }
+
+        .admin-header h2 {
+            color: #1a3a6b;
+        }
+
+        .close-admin {
+            background: #dc143c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .close-admin:hover {
+            background: #b01030;
+        }
+
+        .admin-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .admin-tab {
+            padding: 0.8rem 1.5rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .admin-tab.active {
+            color: #1a3a6b;
+            border-bottom-color: #2c5aa0;
+            font-weight: bold;
+        }
+
+        .admin-tab:hover {
+            color: #2c5aa0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .company-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .admin-company-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+        }
+
+        .admin-company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .admin-company-header h4 {
+            color: #1a3a6b;
+            font-size: 1.2rem;
+        }
+
+        .admin-btn-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .edit-btn, .delete-btn, .add-btn, .save-btn, .cancel-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .edit-btn {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background: #1a3a6b;
+        }
+
+        .delete-btn {
+            background: #dc143c;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background: #b01030;
+        }
+
+        .add-btn {
+            background: #28a745;
+            color: white;
+            margin-bottom: 1rem;
+            padding: 0.8rem 2rem;
+        }
+
+        .add-btn:hover {
+            background: #218838;
+        }
+
+        .save-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .save-btn:hover {
+            background: #218838;
+        }
+
+        .cancel-btn {
+            background: #6c757d;
+            color: white;
+        }
+
+        .cancel-btn:hover {
+            background: #5a6268;
+        }
+
+        /* Form Styles */
+        .edit-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border: 2px solid #2c5aa0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a3a6b;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2c5aa0;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .review-form-section {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .review-item {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .remove-review-btn {
+            background: #dc143c;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.8rem;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .add-review-btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Login Form */
+        .login-form {
+            max-width: 400px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .login-form h3 {
+            color: #1a3a6b;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .login-btn {
+            width: 100%;
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #1a3a6b;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #2c5aa0;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-inputs {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .company-header {
+                flex-direction: column;
+            }
+
+            .admin-content {
+                margin: 0.5rem;
+                padding: 1rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Atlanta Metro <span>Porta Potty Reviews</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#cities">Cities</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Find the Best Porta Potty Rentals in Atlanta Metro</h1>
+        <p>Compare top-rated portable restroom companies in your area</p>
+    </section>
+
+    <div class="search-container">
+        <div class="search-box">
+            <div class="search-inputs">
+                <input type="text" id="searchInput" placeholder="Search companies or services...">
+                <select id="cityFilter">
+                    <option value="">All Cities</option>
+                </select>
+            </div>
+            <button class="search-btn" onclick="performSearch()">Search</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Cities Grid -->
+        <section id="cities" class="cities-section">
+            <h2 class="section-title">Browse by City</h2>
+            <div class="cities-grid" id="citiesGrid">
+                <!-- Cities will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Company Lists (dynamically generated) -->
+        <div id="companiesContainer"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Atlanta Metro Porta Potty Reviews helps you find the best portable restroom rentals for your event or construction site.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#cities">Browse Cities</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Popular Cities</h3>
+                <ul id="footerCities">
+                    <!-- Will be populated dynamically -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br>info@atlmetropp.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Atlanta Metro Porta Potty Reviews. All rights reserved.</p>
+            <a href="#" class="admin-link" onclick="openAdmin(); return false;">•</a>
+        </div>
+    </footer>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-content">
+            <div id="loginSection" class="login-form">
+                <h3>Admin Login</h3>
+                <div id="loginError" class="error-message" style="display: none;"></div>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="adminUsername" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter password">
+                </div>
+                <button class="login-btn" onclick="adminLogin()">Login</button>
+                <button class="cancel-btn" onclick="closeAdmin()" style="width: 100%; margin-top: 0.5rem;">Cancel</button>
+            </div>
+
+            <div id="adminPanel" style="display: none;">
+                <div class="admin-header">
+                    <h2>Admin Panel</h2>
+                    <button class="close-admin" onclick="closeAdmin()">Close</button>
+                </div>
+
+                <div id="adminMessage" style="display: none;"></div>
+
+                <div class="admin-tabs">
+                    <button class="admin-tab active" onclick="switchTab('companies')">Manage Companies</button>
+                    <button class="admin-tab" onclick="switchTab('cities')">Manage Cities</button>
+                </div>
+
+                <div id="companiesTab" class="tab-content active">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h3 style="color: #1a3a6b;">Companies</h3>
+                        <button class="add-btn" onclick="showAddCompanyForm()">+ Add New Company</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Filter by City</label>
+                        <select id="adminCityFilter" onchange="loadCompaniesAdmin()">
+                            <option value="">All Cities</option>
+                        </select>
+                    </div>
+
+                    <div id="addCompanyForm" style="display: none;">
+                        <!-- Add company form will be generated here -->
+                    </div>
+
+                    <div id="companiesList" class="company-list">
+                        <!-- Companies will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="citiesTab" class="tab-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <h3 style="color: #1a3a6b;">Cities</h3>
+                        <button class="add-btn" onclick="showAddCityForm()">+ Add New City</button>
+                    </div>
+
+                    <div id="addCityForm" style="display: none;">
+                        <!-- Add city form will be generated here -->
+                    </div>
+
+                    <div id="citiesList" class="company-list">
+                        <!-- Cities will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data will be stored in API endpoint with Vercel Blob
+        let currentData = {
+            cities: [],
+            companies: []
+        };
+        let isLoggedIn = false;
+
+        // Initialize the site
+        async function initSite() {
+            await loadData();
+            renderCities();
+            renderCompaniesContainers();
+            populateFooterCities();
+            populateCityFilters();
+        }
+
+        // Load data from API
+        async function loadData() {
+            try {
+                const response = await fetch('/api/data');
+                if (response.ok) {
+                    currentData = await response.json();
+                } else {
+                    // Initialize with default data if no data exists
+                    currentData = getDefaultData();
+                }
+            } catch (error) {
+                console.error('Error loading data:', error);
+                currentData = getDefaultData();
+            }
+        }
+
+        // Save data to API
+        async function saveData() {
+            try {
+                const response = await fetch('/api/data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(currentData)
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to save data');
+                }
+                
+                return true;
+            } catch (error) {
+                console.error('Error saving data:', error);
+                return false;
+            }
+        }
+
+        // Default data structure
+        function getDefaultData() {
+            return {
+                cities: [
+                    { id: 'atlanta', name: 'Atlanta', slug: 'atlanta' },
+                    { id: 'alpharetta', name: 'Alpharetta', slug: 'alpharetta' },
+                    { id: 'marietta', name: 'Marietta', slug: 'marietta' },
+                    { id: 'roswell', name: 'Roswell', slug: 'roswell' },
+                    { id: 'sandy-springs', name: 'Sandy Springs', slug: 'sandy-springs' },
+                    { id: 'johns-creek', name: 'Johns Creek', slug: 'johns-creek' },
+                    { id: 'duluth', name: 'Duluth', slug: 'duluth' },
+                    { id: 'lawrenceville', name: 'Lawrenceville', slug: 'lawrenceville' }
+                ],
+                companies: [
+                    {
+                        id: 'patriot-atlanta',
+                        name: 'Patriot Portables',
+                        city: 'atlanta',
+                        rating: 5,
+                        reviewCount: 127,
+                        phone: '(678) 456-3488',
+                        location: 'Serving Atlanta Metro',
+                        hours: 'Same Day Delivery',
+                        website: 'https://patriotportables.com',
+                        badges: ['Veteran Owned'],
+                        services: ['Standard Porta Potties', 'ADA Compliant Units', 'Luxury Restroom Trailers', 'Hand Washing Stations', 'Construction Sites', 'Special Events'],
+                        reviews: [
+                            {
+                                name: 'Julia S.',
+                                rating: 5,
+                                text: 'I can\'t say enough GREAT things about Patriot Portables! Ken was so personable, accessible and attentive. They delivered 4 porta potties early and picked them up on time. They were very clean! I HIGHLY RECOMMEND Patriot Portables!'
+                            },
+                            {
+                                name: 'Elise M.',
+                                rating: 5,
+                                text: 'The team at Patriot went above and beyond to make my renting experience pleasant and seamless. Their products are clean and fresh. Thank you all for your hard work!'
+                            }
+                        ]
+                    }
+                    // More companies will be added via admin panel
+                ]
+            };
+        }
+
+        // Render cities grid
+        function renderCities() {
+            const grid = document.getElementById('citiesGrid');
+            grid.innerHTML = currentData.cities.map(city => {
+                const companyCount = currentData.companies.filter(c => c.city === city.id).length;
+                return `
+                    <a href="#" class="city-card" onclick="showCity('${city.id}'); return false;">
+                        <h3>${city.name}</h3>
+                        <p class="company-count">${companyCount} Companies</p>
+                    </a>
+                `;
+            }).join('');
+        }
+
+        // Render all company containers
+        function renderCompaniesContainers() {
+            const container = document.getElementById('companiesContainer');
+            container.innerHTML = currentData.cities.map(city => `
+                <div id="${city.id}-companies" class="companies-list">
+                    <button class="back-btn" onclick="backToCities()">← Back to Cities</button>
+                    <h2 class="section-title">Porta Potty Rentals in ${city.name}</h2>
+                    ${renderCompaniesForCity(city.id)}
+                </div>
+            `).join('');
+        }
+
+        // Render companies for a specific city
+        function renderCompaniesForCity(cityId) {
+            const companies = currentData.companies.filter(c => c.city === cityId);
+            
+            return companies.map(company => `
+                <div class="company-card">
+                    <div class="company-header">
+                        <div class="company-info">
+                            <h3>${company.name}</h3>
+                            <div class="rating">
+                                <span class="stars">${'★'.repeat(company.rating)}${'☆'.repeat(5 - company.rating)}</span>
+                                <span class="review-count">(${company.reviewCount} reviews)</span>
+                            </div>
+                        </div>
+                        ${company.website ? 
+                            `<a href="${company.website}" class="contact-btn" target="_blank">Visit Website</a>` :
+                            `<a href="tel:${company.phone}" class="contact-btn">Contact</a>`
+                        }
+                    </div>
+                    <div class="company-details">
+                        <div class="detail-item">
+                            <strong>📞</strong> ${company.phone}
+                        </div>
+                        <div class="detail-item">
+                            <strong>📍</strong> ${company.location}
+                        </div>
+                        ${company.hours ? `
+                            <div class="detail-item">
+                                <strong>⏰</strong> ${company.hours}
+                            </div>
+                        ` : ''}
+                        ${company.badges && company.badges.length > 0 ? company.badges.map(badge => `
+                            <div class="detail-item">
+                                <strong>✓</strong> ${badge}
+                            </div>
+                        `).join('') : ''}
+                    </div>
+                    ${company.services && company.services.length > 0 ? `
+                        <div class="services">
+                            <h4>Services Offered:</h4>
+                            <div class="service-tags">
+                                ${company.services.map(service => `
+                                    <span class="service-tag">${service}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                    ${company.reviews && company.reviews.length > 0 ? `
+                        <div class="reviews-section">
+                            <h4>Recent Reviews:</h4>
+                            ${company.reviews.map(review => `
+                                <div class="review">
+                                    <div class="review-header">
+                                        <span class="reviewer-name">${review.name}</span>
+                                        <span class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</span>
+                                    </div>
+                                    <p class="review-text">${review.text}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        // Show city companies
+        function showCity(cityId) {
+            document.querySelector('.cities-section').style.display = 'none';
+            document.querySelectorAll('.companies-list').forEach(list => {
+                list.classList.remove('active');
+            });
+            
+            const selectedList = document.getElementById(cityId + '-companies');
+            if (selectedList) {
+                selectedList.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Back to cities
+        function backToCities() {
+            document.querySelector('.cities-section').style.display = 'block';
+            document.querySelectorAll('.companies-list').forEach(list => {
+                list.classList.remove('active');
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Search functionality
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cityFilter = document.getElementById('cityFilter').value;
+            
+            if (cityFilter) {
+                showCity(cityFilter);
+            } else if (searchTerm) {
+                // Simple search - show first city with matching companies
+                const matchingCompany = currentData.companies.find(c => 
+                    c.name.toLowerCase().includes(searchTerm) || 
+                    c.services.some(s => s.toLowerCase().includes(searchTerm))
+                );
+                if (matchingCompany) {
+                    showCity(matchingCompany.city);
+                }
+            }
+        }
+
+        // Populate footer cities
+        function populateFooterCities() {
+            const footer = document.getElementById('footerCities');
+            footer.innerHTML = currentData.cities.slice(0, 4).map(city => `
+                <li><a href="#" onclick="showCity('${city.id}'); return false;">${city.name}</a></li>
+            `).join('');
+        }
+
+        // Populate city filters
+        function populateCityFilters() {
+            const filters = [
+                document.getElementById('cityFilter'),
+                document.getElementById('adminCityFilter')
+            ];
+            
+            filters.forEach(filter => {
+                if (filter) {
+                    const currentValue = filter.value;
+                    filter.innerHTML = '<option value="">All Cities</option>' + 
+                        currentData.cities.map(city => 
+                            `<option value="${city.id}">${city.name}</option>`
+                        ).join('');
+                    filter.value = currentValue;
+                }
+            });
+        }
+
+        // Admin functions
+        function openAdmin() {
+            document.getElementById('adminModal').classList.add('active');
+            if (isLoggedIn) {
+                document.getElementById('loginSection').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                loadCompaniesAdmin();
+                loadCitiesAdmin();
+            }
+        }
+
+        function closeAdmin() {
+            document.getElementById('adminModal').classList.remove('active');
+            document.getElementById('loginError').style.display = 'none';
+            document.getElementById('adminUsername').value = '';
+            document.getElementById('adminPassword').value = '';
+        }
+
+        async function adminLogin() {
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+            
+            // Simple authentication - you should change these credentials
+            if (username === 'admin' && password === 'patriot2026') {
+                isLoggedIn = true;
+                document.getElementById('loginSection').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                document.getElementById('loginError').style.display = 'none';
+                await loadCompaniesAdmin();
+                await loadCitiesAdmin();
+            } else {
+                document.getElementById('loginError').textContent = 'Invalid username or password';
+                document.getElementById('loginError').style.display = 'block';
+            }
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            if (tab === 'companies') {
+                document.querySelector('[onclick="switchTab(\'companies\')"]').classList.add('active');
+                document.getElementById('companiesTab').classList.add('active');
+            } else {
+                document.querySelector('[onclick="switchTab(\'cities\')"]').classList.add('active');
+                document.getElementById('citiesTab').classList.add('active');
+            }
+        }
+
+        // Load companies in admin
+        function loadCompaniesAdmin() {
+            const filterCity = document.getElementById('adminCityFilter').value;
+            const companies = filterCity ? 
+                currentData.companies.filter(c => c.city === filterCity) : 
+                currentData.companies;
+            
+            const list = document.getElementById('companiesList');
+            list.innerHTML = companies.map(company => {
+                const city = currentData.cities.find(c => c.id === company.city);
+                return `
+                    <div class="admin-company-card">
+                        <div class="admin-company-header">
+                            <div>
+                                <h4>${company.name}</h4>
+                                <p style="color: #666; font-size: 0.9rem;">${city ? city.name : 'Unknown City'} | ${company.rating}★ | ${company.reviewCount} reviews</p>
+                            </div>
+                            <div class="admin-btn-group">
+                                <button class="edit-btn" onclick='editCompany(${JSON.stringify(company).replace(/'/g, "&#39;")})'>Edit</button>
+                                <button class="delete-btn" onclick="deleteCompany('${company.id}')">Delete</button>
+                            </div>
+                        </div>
+                        <p style="color: #666; margin-top: 0.5rem;">${company.phone} | ${company.location}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Load cities in admin
+        function loadCitiesAdmin() {
+            const list = document.getElementById('citiesList');
+            list.innerHTML = currentData.cities.map(city => {
+                const companyCount = currentData.companies.filter(c => c.city === city.id).length;
+                return `
+                    <div class="admin-company-card">
+                        <div class="admin-company-header">
+                            <div>
+                                <h4>${city.name}</h4>
+                                <p style="color: #666; font-size: 0.9rem;">${companyCount} companies</p>
+                            </div>
+                            <div class="admin-btn-group">
+                                <button class="edit-btn" onclick='editCity(${JSON.stringify(city).replace(/'/g, "&#39;")})'>Edit</button>
+                                <button class="delete-btn" onclick="deleteCity('${city.id}')">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Show add company form
+        function showAddCompanyForm() {
+            const form = document.getElementById('addCompanyForm');
+            form.style.display = 'block';
+            form.innerHTML = generateCompanyForm(null);
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Show add city form
+        function showAddCityForm() {
+            const form = document.getElementById('addCityForm');
+            form.style.display = 'block';
+            form.innerHTML = generateCityForm(null);
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Generate company form
+        function generateCompanyForm(company) {
+            const isEdit = company !== null;
+            const formId = isEdit ? 'editForm' : 'addForm';
+            
+            return `
+                <div class="edit-form">
+                    <h3 style="color: #1a3a6b; margin-bottom: 1.5rem;">${isEdit ? 'Edit' : 'Add New'} Company</h3>
+                    <form id="${formId}" onsubmit="saveCompany(event, ${isEdit})">
+                        <input type="hidden" name="id" value="${company?.id || ''}">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Company Name *</label>
+                                <input type="text" name="name" value="${company?.name || ''}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>City *</label>
+                                <select name="city" required>
+                                    <option value="">Select City</option>
+                                    ${currentData.cities.map(c => `
+                                        <option value="${c.id}" ${company?.city === c.id ? 'selected' : ''}>${c.name}</option>
+                                    `).join('')}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone *</label>
+                                <input type="tel" name="phone" value="${company?.phone || ''}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Location *</label>
+                                <input type="text" name="location" value="${company?.location || ''}" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Rating (1-5) *</label>
+                                <input type="number" name="rating" min="1" max="5" value="${company?.rating || 5}" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Review Count *</label>
+                                <input type="number" name="reviewCount" value="${company?.reviewCount || 0}" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Hours</label>
+                                <input type="text" name="hours" value="${company?.hours || ''}" placeholder="e.g., Mon-Fri: 8AM-5PM">
+                            </div>
+                            <div class="form-group">
+                                <label>Website</label>
+                                <input type="url" name="website" value="${company?.website || ''}" placeholder="https://example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Badges (comma-separated)</label>
+                            <input type="text" name="badges" value="${company?.badges?.join(', ') || ''}" placeholder="e.g., Veteran Owned, Family Business">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Services (comma-separated) *</label>
+                            <textarea name="services" required placeholder="e.g., Standard Porta Potties, ADA Compliant Units, Luxury Trailers">${company?.services?.join(', ') || ''}</textarea>
+                        </div>
+
+                        <div class="review-form-section">
+                            <h4 style="color: #1a3a6b; margin-bottom: 1rem;">Reviews</h4>
+                            <div id="reviewsList">
+                                ${company?.reviews?.map((review, index) => `
+                                    <div class="review-item">
+                                        <div class="form-group">
+                                            <label>Reviewer Name</label>
+                                            <input type="text" name="review_name_${index}" value="${review.name}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Rating (1-5)</label>
+                                            <input type="number" name="review_rating_${index}" min="1" max="5" value="${review.rating}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Review Text</label>
+                                            <textarea name="review_text_${index}">${review.text}</textarea>
+                                        </div>
+                                        <button type="button" class="remove-review-btn" onclick="this.parentElement.remove()">Remove Review</button>
+                                    </div>
+                                `).join('') || ''}
+                            </div>
+                            <button type="button" class="add-review-btn" onclick="addReviewField()">+ Add Review</button>
+                        </div>
+
+                        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                            <button type="submit" class="save-btn">Save Company</button>
+                            <button type="button" class="cancel-btn" onclick="cancelForm('${isEdit ? 'edit' : 'add'}Company')">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+        }
+
+        // Generate city form
+        function generateCityForm(city) {
+            const isEdit = city !== null;
+            const formId = isEdit ? 'editCityForm' : 'addCityForm';
+            
+            return `
+                <div class="edit-form">
+                    <h3 style="color: #1a3a6b; margin-bottom: 1.5rem;">${isEdit ? 'Edit' : 'Add New'} City</h3>
+                    <form id="${formId}" onsubmit="saveCity(event, ${isEdit})">
+                        <input type="hidden" name="id" value="${city?.id || ''}">
+                        
+                        <div class="form-group">
+                            <label>City Name *</label>
+                            <input type="text" name="name" value="${city?.name || ''}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>URL Slug *</label>
+                            <input type="text" name="slug" value="${city?.slug || ''}" required placeholder="e.g., atlanta or sandy-springs">
+                            <small style="color: #666;">Use lowercase and hyphens for spaces</small>
+                        </div>
+
+                        <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                            <button type="submit" class="save-btn">Save City</button>
+                            <button type="button" class="cancel-btn" onclick="cancelForm('${isEdit ? 'edit' : 'add'}City')">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+        }
+
+        // Add review field
+        function addReviewField() {
+            const reviewsList = document.getElementById('reviewsList');
+            const index = reviewsList.children.length;
+            const reviewItem = document.createElement('div');
+            reviewItem.className = 'review-item';
+            reviewItem.innerHTML = `
+                <div class="form-group">
+                    <label>Reviewer Name</label>
+                    <input type="text" name="review_name_${index}" value="">
+                </div>
+                <div class="form-group">
+                    <label>Rating (1-5)</label>
+                    <input type="number" name="review_rating_${index}" min="1" max="5" value="5">
+                </div>
+                <div class="form-group">
+                    <label>Review Text</label>
+                    <textarea name="review_text_${index}"></textarea>
+                </div>
+                <button type="button" class="remove-review-btn" onclick="this.parentElement.remove()">Remove Review</button>
+            `;
+            reviewsList.appendChild(reviewItem);
+        }
+
+        // Save company
+        async function saveCompany(event, isEdit) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const company = {
+                id: formData.get('id') || 'company-' + Date.now(),
+                name: formData.get('name'),
+                city: formData.get('city'),
+                phone: formData.get('phone'),
+                location: formData.get('location'),
+                rating: parseInt(formData.get('rating')),
+                reviewCount: parseInt(formData.get('reviewCount')),
+                hours: formData.get('hours'),
+                website: formData.get('website'),
+                badges: formData.get('badges') ? formData.get('badges').split(',').map(b => b.trim()) : [],
+                services: formData.get('services').split(',').map(s => s.trim()),
+                reviews: []
+            };
+
+            // Collect reviews
+            let reviewIndex = 0;
+            while (formData.has(`review_name_${reviewIndex}`)) {
+                const name = formData.get(`review_name_${reviewIndex}`);
+                const rating = formData.get(`review_rating_${reviewIndex}`);
+                const text = formData.get(`review_text_${reviewIndex}`);
+                
+                if (name && text) {
+                    company.reviews.push({
+                        name: name,
+                        rating: parseInt(rating),
+                        text: text
+                    });
+                }
+                reviewIndex++;
+            }
+
+            if (isEdit) {
+                const index = currentData.companies.findIndex(c => c.id === company.id);
+                currentData.companies[index] = company;
+            } else {
+                currentData.companies.push(company);
+            }
+
+            const saved = await saveData();
+            if (saved) {
+                showMessage('Company saved successfully!', 'success');
+                cancelForm(isEdit ? 'editCompany' : 'addCompany');
+                await loadData();
+                renderCities();
+                renderCompaniesContainers();
+                loadCompaniesAdmin();
+                populateCityFilters();
+            } else {
+                showMessage('Error saving company. Please try again.', 'error');
+            }
+        }
+
+        // Save city
+        async function saveCity(event, isEdit) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const city = {
+                id: formData.get('id') || formData.get('slug'),
+                name: formData.get('name'),
+                slug: formData.get('slug')
+            };
+
+            if (isEdit) {
+                const index = currentData.cities.findIndex(c => c.id === city.id);
+                currentData.cities[index] = city;
+            } else {
+                currentData.cities.push(city);
+            }
+
+            const saved = await saveData();
+            if (saved) {
+                showMessage('City saved successfully!', 'success');
+                cancelForm(isEdit ? 'editCity' : 'addCity');
+                await loadData();
+                renderCities();
+                renderCompaniesContainers();
+                loadCitiesAdmin();
+                populateCityFilters();
+                populateFooterCities();
+            } else {
+                showMessage('Error saving city. Please try again.', 'error');
+            }
+        }
+
+        // Edit company
+        function editCompany(company) {
+            const form = document.getElementById('addCompanyForm');
+            form.style.display = 'block';
+            form.innerHTML = generateCompanyForm(company);
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Edit city
+        function editCity(city) {
+            const form = document.getElementById('addCityForm');
+            form.style.display = 'block';
+            form.innerHTML = generateCityForm(city);
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Delete company
+        async function deleteCompany(id) {
+            if (!confirm('Are you sure you want to delete this company?')) return;
+            
+            currentData.companies = currentData.companies.filter(c => c.id !== id);
+            const saved = await saveData();
+            
+            if (saved) {
+                showMessage('Company deleted successfully!', 'success');
+                await loadData();
+                renderCities();
+                renderCompaniesContainers();
+                loadCompaniesAdmin();
+            } else {
+                showMessage('Error deleting company. Please try again.', 'error');
+            }
+        }
+
+        // Delete city
+        async function deleteCity(id) {
+            const companyCount = currentData.companies.filter(c => c.city === id).length;
+            if (companyCount > 0) {
+                alert(`Cannot delete city. There are ${companyCount} companies in this city. Please delete or move them first.`);
+                return;
+            }
+            
+            if (!confirm('Are you sure you want to delete this city?')) return;
+            
+            currentData.cities = currentData.cities.filter(c => c.id !== id);
+            const saved = await saveData();
+            
+            if (saved) {
+                showMessage('City deleted successfully!', 'success');
+                await loadData();
+                renderCities();
+                renderCompaniesContainers();
+                loadCitiesAdmin();
+                populateCityFilters();
+                populateFooterCities();
+            } else {
+                showMessage('Error deleting city. Please try again.', 'error');
+            }
+        }
+
+        // Cancel form
+        function cancelForm(formType) {
+            if (formType === 'addCompany') {
+                document.getElementById('addCompanyForm').style.display = 'none';
+            } else if (formType === 'editCompany') {
+                document.getElementById('addCompanyForm').style.display = 'none';
+            } else if (formType === 'addCity') {
+                document.getElementById('addCityForm').style.display = 'none';
+            } else if (formType === 'editCity') {
+                document.getElementById('addCityForm').style.display = 'none';
+            }
+        }
+
+        // Show message
+        function showMessage(text, type) {
+            const messageDiv = document.getElementById('adminMessage');
+            messageDiv.className = type === 'success' ? 'success-message' : 'error-message';
+            messageDiv.textContent = text;
+            messageDiv.style.display = 'block';
+            
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Allow Enter key to search
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+            
+            // Initialize the site
+            initSite();
+        });
+    </script>
+</body>
+</html>
