@@ -314,6 +314,79 @@
             line-height: 1.6;
         }
 
+        /* Pros and Cons Section */
+        .pros-cons-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .pros-box, .cons-box {
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .pros-box {
+            background: #f0f9f4;
+            border-left: 4px solid #28a745;
+        }
+
+        .cons-box {
+            background: #fef5f5;
+            border-left: 4px solid #dc3545;
+        }
+
+        .pros-box h4, .cons-box h4 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pros-box h4 {
+            color: #28a745;
+        }
+
+        .cons-box h4 {
+            color: #dc3545;
+        }
+
+        .pros-list, .cons-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pros-list li, .cons-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .pros-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .cons-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .pros-cons-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .contact-btn {
             background-color: #dc143c;
             color: white;
@@ -659,6 +732,50 @@
             margin-top: 0.5rem;
         }
 
+        /* Pros/Cons Form Section */
+        .pros-cons-form-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .pros-cons-item {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            align-items: center;
+        }
+
+        .pros-cons-item input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .remove-item-btn {
+            background: #dc143c;
+            color: white;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .add-item-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
         /* Login Form */
         .login-form {
             max-width: 400px;
@@ -817,7 +934,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br>info@atlmetropp.com</p>
+                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f464149406f4e5b43424a5b5d405f5f014c4042">[email&#160;protected]</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -897,7 +1014,7 @@
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Data will be stored in API endpoint with Vercel Blob
         let currentData = {
             cities: [],
@@ -990,6 +1107,18 @@
                                 rating: 5,
                                 text: 'The team at Patriot went above and beyond to make my renting experience pleasant and seamless. Their products are clean and fresh. Thank you all for your hard work!'
                             }
+                        ],
+                        pros: [
+                            'Veteran-owned and operated business',
+                            'Brand new, spotlessly clean units',
+                            'Same-day delivery available',
+                            'Excellent customer service and communication',
+                            'Owner personally oversees deliveries',
+                            'Luxury restroom trailers available'
+                        ],
+                        cons: [
+                            'Premium pricing compared to some competitors',
+                            'Limited service area outside Metro Atlanta'
                         ]
                     },
                     {
@@ -1015,6 +1144,17 @@
                                 rating: 4,
                                 text: 'Good overall experience. Delivery was on time and the units were in good condition. Pricing was competitive.'
                             }
+                        ],
+                        pros: [
+                            '24/7 customer service availability',
+                            'Competitive pricing',
+                            'Regular servicing schedule',
+                            'Experience with large construction projects'
+                        ],
+                        cons: [
+                            'Units show signs of wear and tear',
+                            'Communication could be improved',
+                            'Limited luxury options'
                         ]
                     },
                     {
@@ -1035,6 +1175,18 @@
                                 rating: 5,
                                 text: 'Perfect for our outdoor wedding! The luxury trailer was immaculate and added a touch of elegance. Staff was professional and attentive.'
                             }
+                        ],
+                        pros: [
+                            'Specializes in high-end events and weddings',
+                            'Immaculate luxury trailers',
+                            'Emergency service available',
+                            'Professional and attentive staff',
+                            'Full event planning assistance'
+                        ],
+                        cons: [
+                            'Higher price point',
+                            'Requires advance booking for luxury units',
+                            'Limited availability during peak wedding season'
                         ]
                     },
                     {
@@ -1880,6 +2032,26 @@
                             `).join('')}
                         </div>
                     ` : ''}
+                    ${(company.pros && company.pros.length > 0) || (company.cons && company.cons.length > 0) ? `
+                        <div class="pros-cons-section">
+                            ${company.pros && company.pros.length > 0 ? `
+                                <div class="pros-box">
+                                    <h4>👍 What We Like</h4>
+                                    <ul class="pros-list">
+                                        ${company.pros.map(pro => `<li>${pro}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            ` : ''}
+                            ${company.cons && company.cons.length > 0 ? `
+                                <div class="cons-box">
+                                    <h4>👎 What We Don't Like</h4>
+                                    <ul class="cons-list">
+                                        ${company.cons.map(con => `<li>${con}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            ` : ''}
+                        </div>
+                    ` : ''}
                 </div>
             `).join('');
         }
@@ -2162,6 +2334,30 @@
                             <button type="button" class="add-review-btn" onclick="addReviewField()">+ Add Review</button>
                         </div>
 
+                        <div class="pros-cons-form-section">
+                            <h4 style="color: #1a3a6b; margin: 2rem 0 1rem;">👍 What We Like (Pros)</h4>
+                            <div id="prosList">
+                                ${company?.pros?.map((pro, index) => `
+                                    <div class="pros-cons-item">
+                                        <input type="text" name="pro_${index}" value="${pro}" placeholder="Enter a positive point">
+                                        <button type="button" class="remove-item-btn" onclick="this.parentElement.remove()">✕</button>
+                                    </div>
+                                `).join('') || ''}
+                            </div>
+                            <button type="button" class="add-item-btn" onclick="addProsField()">+ Add Pro</button>
+
+                            <h4 style="color: #1a3a6b; margin: 2rem 0 1rem;">👎 What We Don't Like (Cons)</h4>
+                            <div id="consList">
+                                ${company?.cons?.map((con, index) => `
+                                    <div class="pros-cons-item">
+                                        <input type="text" name="con_${index}" value="${con}" placeholder="Enter a negative point">
+                                        <button type="button" class="remove-item-btn" onclick="this.parentElement.remove()">✕</button>
+                                    </div>
+                                `).join('') || ''}
+                            </div>
+                            <button type="button" class="add-item-btn" onclick="addConsField()">+ Add Con</button>
+                        </div>
+
                         <div style="margin-top: 2rem; display: flex; gap: 1rem;">
                             <button type="submit" class="save-btn">Save Company</button>
                             <button type="button" class="cancel-btn" onclick="cancelForm('${isEdit ? 'edit' : 'add'}Company')">Cancel</button>
@@ -2226,6 +2422,32 @@
             reviewsList.appendChild(reviewItem);
         }
 
+        // Add pros field
+        function addProsField() {
+            const prosList = document.getElementById('prosList');
+            const index = prosList.children.length;
+            const prosItem = document.createElement('div');
+            prosItem.className = 'pros-cons-item';
+            prosItem.innerHTML = `
+                <input type="text" name="pro_${index}" value="" placeholder="Enter a positive point">
+                <button type="button" class="remove-item-btn" onclick="this.parentElement.remove()">✕</button>
+            `;
+            prosList.appendChild(prosItem);
+        }
+
+        // Add cons field
+        function addConsField() {
+            const consList = document.getElementById('consList');
+            const index = consList.children.length;
+            const consItem = document.createElement('div');
+            consItem.className = 'pros-cons-item';
+            consItem.innerHTML = `
+                <input type="text" name="con_${index}" value="" placeholder="Enter a negative point">
+                <button type="button" class="remove-item-btn" onclick="this.parentElement.remove()">✕</button>
+            `;
+            consList.appendChild(consItem);
+        }
+
         // Save company
         async function saveCompany(event, isEdit) {
             event.preventDefault();
@@ -2262,6 +2484,28 @@
                     });
                 }
                 reviewIndex++;
+            }
+
+            // Collect pros
+            company.pros = [];
+            let prosIndex = 0;
+            while (formData.has(`pro_${prosIndex}`)) {
+                const pro = formData.get(`pro_${prosIndex}`);
+                if (pro && pro.trim()) {
+                    company.pros.push(pro.trim());
+                }
+                prosIndex++;
+            }
+
+            // Collect cons
+            company.cons = [];
+            let consIndex = 0;
+            while (formData.has(`con_${consIndex}`)) {
+                const con = formData.get(`con_${consIndex}`);
+                if (con && con.trim()) {
+                    company.cons.push(con.trim());
+                }
+                consIndex++;
             }
 
             if (isEdit) {
@@ -2409,15 +2653,4 @@
             const searchInput = document.getElementById('searchInput');
             if (searchInput) {
                 searchInput.addEventListener('keypress', function(e) {
-                    if (e.key === 'Enter') {
-                        performSearch();
-                    }
-                });
-            }
-            
-            // Initialize the site
-            initSite();
-        });
-    </script>
-</body>
-</html>
+                    if (e.
