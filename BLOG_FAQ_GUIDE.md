@@ -1,4 +1,4 @@
-# Blog and FAQ Management Guide test
+# Blog and FAQ Management Guide
 
 Your Atlanta Metro Porta Potty Reviews site now includes a fully manageable Blog and FAQ section!
 
