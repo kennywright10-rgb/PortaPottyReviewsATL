@@ -537,7 +537,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5dcdbd3daf5d4c1d9d8d0c1c7dac5c59bd6dad8">[email&#160;protected]</a></p>
+                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb92959d94bb9a8f97969e8f89948b8bd5989496">[email&#160;protected]</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -601,12 +601,15 @@
                 const response = await fetch('/api/faq');
                 if (response.ok) {
                     const data = await response.json();
-                    faqData = data.faqs || [];
+                    if (data && data.faqs && data.faqs.length > 0) {
+                        faqData = data.faqs;
+                    } else {
+                        faqData = getDefaultFAQData();
+                    }
                 } else {
                     faqData = getDefaultFAQData();
                 }
             } catch (error) {
-                console.error('Error loading FAQ data:', error);
                 faqData = getDefaultFAQData();
             }
         }
@@ -952,4 +955,13 @@
             messageDiv.textContent = text;
             messageDiv.style.display = 'block';
             
-            se
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        // Boot the FAQ page
+        document.addEventListener('DOMContentLoaded', initFAQ);
+    </script>
+</body>
+</html>

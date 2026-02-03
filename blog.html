@@ -580,7 +580,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="650c0b030a25041109080011170a15154b060a08">[email&#160;protected]</a></p>
+                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6bfb8b0b996b7a2babbb3a2a4b9a6a6f8b5b9bb">[email&#160;protected]</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -649,12 +649,15 @@
                 const response = await fetch('/api/blog');
                 if (response.ok) {
                     const data = await response.json();
-                    blogPosts = data.posts || [];
+                    if (data && data.posts && data.posts.length > 0) {
+                        blogPosts = data.posts;
+                    } else {
+                        blogPosts = getDefaultBlogPosts();
+                    }
                 } else {
                     blogPosts = getDefaultBlogPosts();
                 }
             } catch (error) {
-                console.error('Error loading blog data:', error);
                 blogPosts = getDefaultBlogPosts();
             }
         }

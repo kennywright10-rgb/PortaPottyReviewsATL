@@ -934,7 +934,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2f464149406f4e5b43424a5b5d405f5f014c4042">[email&#160;protected]</a></p>
+                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="mailto:info@portapottyreviews.com">info@portapottyreviews.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1014,7 +1014,7 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Data will be stored in API endpoint with Vercel Blob
         let currentData = {
             cities: [],
@@ -1036,13 +1036,18 @@
             try {
                 const response = await fetch('/api/data');
                 if (response.ok) {
-                    currentData = await response.json();
+                    const json = await response.json();
+                    // Only use API data if it has both cities AND companies; otherwise fall back
+                    if (json && json.cities && json.cities.length > 0 && json.companies && json.companies.length > 0) {
+                        currentData = json;
+                    } else {
+                        currentData = getDefaultData();
+                    }
                 } else {
-                    // Initialize with default data if no data exists
                     currentData = getDefaultData();
                 }
             } catch (error) {
-                console.error('Error loading data:', error);
+                // Covers: network error, running locally, bad JSON, etc.
                 currentData = getDefaultData();
             }
         }
@@ -2648,9 +2653,21 @@
             }, 5000);
         }
 
-        // Allow Enter key to search
+        // Allow Enter key to search & boot the site
         document.addEventListener('DOMContentLoaded', function() {
+            // Boot the site — renders cities, companies, footer
+            initSite();
+
             const searchInput = document.getElementById('searchInput');
             if (searchInput) {
                 searchInput.addEventListener('keypress', function(e) {
-                    if (e.
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        performSearch();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
