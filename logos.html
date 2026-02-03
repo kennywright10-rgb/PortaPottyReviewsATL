@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Metro Porta Potty Reviews - Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #1a3a6b;
+            margin-bottom: 2rem;
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .logo-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .logo-item h3 {
+            color: #1a3a6b;
+            margin: 1rem 0 0.5rem;
+        }
+        .logo-item p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .logo-preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
+            margin: 1rem 0;
+        }
+        .download-btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        .download-btn:hover {
+            background: #1a3a6b;
+        }
+        .color-preview {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            border: 2px solid #e0e0e0;
+        }
+        .usage-guide {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        .usage-guide h2 {
+            color: #1a3a6b;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Atlanta Metro Porta Potty Reviews - Logo Options</h1>
+        
+        <div class="logo-grid">
+            <!-- Logo Option 1: Full Horizontal -->
+            <div class="logo-item">
+                <h3>Full Horizontal Logo</h3>
+                <p>For website header and wide spaces</p>
+                <div class="logo-preview">
+                    <svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Badge/Shield Background -->
+                        <path d="M 50 15 L 80 15 L 85 20 L 85 60 L 65 75 L 45 60 L 45 20 Z" 
+                              fill="#1a3a6b" stroke="#2c5aa0" stroke-width="2"/>
+                        
+                        <!-- 5 Stars in badge -->
+                        <path d="M 52 30 L 54 35 L 59 35 L 55 38 L 57 43 L 52 40 L 47 43 L 49 38 L 45 35 L 50 35 Z" fill="#FDB022"/>
+                        <path d="M 58 44 L 60 49 L 65 49 L 61 52 L 63 57 L 58 54 L 53 57 L 55 52 L 51 49 L 56 49 Z" fill="#FDB022"/>
+                        <path d="M 65 30 L 67 35 L 72 35 L 68 38 L 70 43 L 65 40 L 60 43 L 62 38 L 58 35 L 63 35 Z" fill="#FDB022"/>
+                        <path d="M 72 44 L 74 49 L 79 49 L 75 52 L 77 57 L 72 54 L 67 57 L 69 52 L 65 49 L 70 49 Z" fill="#FDB022"/>
+                        <path d="M 78 30 L 80 35 L 85 35 L 81 38 L 83 43 L 78 40 L 73 43 L 75 38 L 71 35 L 76 35 Z" fill="#FDB022"/>
+                        
+                        <!-- Text -->
+                        <text x="100" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a3a6b">
+                            Atlanta Metro
+                        </text>
+                        <text x="100" y="62" font-family="Arial, sans-serif" font-size="16" font-weight="normal" fill="#2c5aa0">
+                            Porta Potty Reviews
+                        </text>
+                        <text x="100" y="78" font-family="Arial, sans-serif" font-size="11" font-weight="normal" fill="#666">
+                            Find the Best Portable Restrooms
+                        </text>
+                    </svg>
+                </div>
+                <button class="download-btn" onclick="downloadSVG('logo-horizontal')">Download SVG</button>
+                <button class="download-btn" onclick="downloadPNG('logo-horizontal', 800, 200)">Download PNG</button>
+            </div>
+
+            <!-- Logo Option 2: Compact Square -->
+            <div class="logo-item">
+                <h3>Square Logo</h3>
+                <p>For social media profiles and favicons</p>
+                <div class="logo-preview">
+                    <svg id="logo-square" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background Circle -->
+                        <circle cx="100" cy="100" r="95" fill="#1a3a6b" stroke="#2c5aa0" stroke-width="4"/>
+                        
+                        <!-- Inner Circle -->
+                        <circle cx="100" cy="100" r="75" fill="#2c5aa0"/>
+                        
+                        <!-- 5 Stars arranged in circle -->
+                        <path d="M 100 55 L 105 68 L 119 68 L 108 76 L 113 89 L 100 81 L 87 89 L 92 76 L 81 68 L 95 68 Z" fill="#FDB022"/>
+                        <path d="M 132 73 L 137 86 L 151 86 L 140 94 L 145 107 L 132 99 L 119 107 L 124 94 L 113 86 L 127 86 Z" fill="#FDB022"/>
+                        <path d="M 140 110 L 145 123 L 159 123 L 148 131 L 153 144 L 140 136 L 127 144 L 132 131 L 121 123 L 135 123 Z" fill="#FDB022"/>
+                        <path d="M 68 73 L 73 86 L 87 86 L 76 94 L 81 107 L 68 99 L 55 107 L 60 94 L 49 86 L 63 86 Z" fill="#FDB022"/>
+                        <path d="M 60 110 L 65 123 L 79 123 L 68 131 L 73 144 L 60 136 L 47 144 L 52 131 L 41 123 L 55 123 Z" fill="#FDB022"/>
+                        
+                        <!-- Text on Path -->
+                        <defs>
+                            <path id="circlePath" d="M 30,100 A 70,70 0 1,1 170,100" fill="none"/>
+                        </defs>
+                        <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">
+                            <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+                                ATLANTA METRO REVIEWS
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <button class="download-btn" onclick="downloadSVG('logo-square')">Download SVG</button>
+                <button class="download-btn" onclick="downloadPNG('logo-square', 400, 400)">Download PNG</button>
+            </div>
+
+            <!-- Logo Option 3: Icon Only -->
+            <div class="logo-item">
+                <h3>Icon Only</h3>
+                <p>For favicons and app icons</p>
+                <div class="logo-preview">
+                    <svg id="logo-icon" width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Badge Shape -->
+                        <path d="M 75 10 L 130 30 L 140 75 L 110 130 L 75 140 L 40 130 L 10 75 L 20 30 Z" 
+                              fill="#1a3a6b" stroke="#2c5aa0" stroke-width="4"/>
+                        
+                        <!-- Inner Shape -->
+                        <path d="M 75 30 L 115 45 L 120 75 L 100 115 L 75 120 L 50 115 L 30 75 L 35 45 Z" 
+                              fill="#2c5aa0"/>
+                        
+                        <!-- 5 Stars in pentagon arrangement -->
+                        <path d="M 75 48 L 78 56 L 87 56 L 80 61 L 83 69 L 75 64 L 67 69 L 70 61 L 63 56 L 72 56 Z" fill="#FDB022"/>
+                        <path d="M 95 62 L 98 70 L 107 70 L 100 75 L 103 83 L 95 78 L 87 83 L 90 75 L 83 70 L 92 70 Z" fill="#FDB022"/>
+                        <path d="M 90 90 L 93 98 L 102 98 L 95 103 L 98 111 L 90 106 L 82 111 L 85 103 L 78 98 L 87 98 Z" fill="#FDB022"/>
+                        <path d="M 55 62 L 58 70 L 67 70 L 60 75 L 63 83 L 55 78 L 47 83 L 50 75 L 43 70 L 52 70 Z" fill="#FDB022"/>
+                        <path d="M 60 90 L 63 98 L 72 98 L 65 103 L 68 111 L 60 106 L 52 111 L 55 103 L 48 98 L 57 98 Z" fill="#FDB022"/>
+                    </svg>
+                </div>
+                <button class="download-btn" onclick="downloadSVG('logo-icon')">Download SVG</button>
+                <button class="download-btn" onclick="downloadPNG('logo-icon', 512, 512)">Download PNG</button>
+            </div>
+
+            <!-- Logo Option 4: Vertical Stack -->
+            <div class="logo-item">
+                <h3>Vertical Logo</h3>
+                <p>For narrow spaces and print</p>
+                <div class="logo-preview">
+                    <svg id="logo-vertical" width="200" height="280" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Badge -->
+                        <path d="M 100 20 L 150 40 L 160 80 L 130 135 L 100 145 L 70 135 L 40 80 L 50 40 Z" 
+                              fill="#1a3a6b" stroke="#2c5aa0" stroke-width="3"/>
+                        
+                        <!-- 5 Stars arranged in pattern -->
+                        <path d="M 100 50 L 104 60 L 115 60 L 106 67 L 110 77 L 100 70 L 90 77 L 94 67 L 85 60 L 96 60 Z" fill="#FDB022"/>
+                        <path d="M 122 70 L 126 80 L 137 80 L 128 87 L 132 97 L 122 90 L 112 97 L 116 87 L 107 80 L 118 80 Z" fill="#FDB022"/>
+                        <path d="M 115 100 L 119 110 L 130 110 L 121 117 L 125 127 L 115 120 L 105 127 L 109 117 L 100 110 L 111 110 Z" fill="#FDB022"/>
+                        <path d="M 78 70 L 82 80 L 93 80 L 84 87 L 88 97 L 78 90 L 68 97 L 72 87 L 63 80 L 74 80 Z" fill="#FDB022"/>
+                        <path d="M 85 100 L 89 110 L 100 110 L 91 117 L 95 127 L 85 120 L 75 127 L 79 117 L 70 110 L 81 110 Z" fill="#FDB022"/>
+                        
+                        <!-- Text -->
+                        <text x="100" y="180" font-family="Arial, sans-serif" font-size="20" font-weight="bold" 
+                              fill="#1a3a6b" text-anchor="middle">Atlanta Metro</text>
+                        <text x="100" y="205" font-family="Arial, sans-serif" font-size="16" font-weight="bold" 
+                              fill="#2c5aa0" text-anchor="middle">Porta Potty</text>
+                        <text x="100" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" 
+                              fill="#2c5aa0" text-anchor="middle">Reviews</text>
+                        <text x="100" y="245" font-family="Arial, sans-serif" font-size="10" 
+                              fill="#666" text-anchor="middle">Find the Best</text>
+                        <text x="100" y="260" font-family="Arial, sans-serif" font-size="10" 
+                              fill="#666" text-anchor="middle">Portable Restrooms</text>
+                    </svg>
+                </div>
+                <button class="download-btn" onclick="downloadSVG('logo-vertical')">Download SVG</button>
+                <button class="download-btn" onclick="downloadPNG('logo-vertical', 400, 560)">Download PNG</button>
+            </div>
+
+            <!-- Logo Option 5: Simple Text -->
+            <div class="logo-item">
+                <h3>Text-Only Logo</h3>
+                <p>Clean and simple for any use</p>
+                <div class="logo-preview">
+                    <svg id="logo-text" width="350" height="80" viewBox="0 0 350 80" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect x="5" y="5" width="340" height="70" rx="8" fill="none" stroke="#2c5aa0" stroke-width="2"/>
+                        
+                        <!-- 5 Stars on left -->
+                        <path d="M 20 25 L 22 30 L 28 30 L 23 34 L 25 39 L 20 35 L 15 39 L 17 34 L 12 30 L 18 30 Z" fill="#FDB022"/>
+                        <path d="M 32 25 L 34 30 L 40 30 L 35 34 L 37 39 L 32 35 L 27 39 L 29 34 L 24 30 L 30 30 Z" fill="#FDB022"/>
+                        <path d="M 20 45 L 22 50 L 28 50 L 23 54 L 25 59 L 20 55 L 15 59 L 17 54 L 12 50 L 18 50 Z" fill="#FDB022"/>
+                        <path d="M 32 45 L 34 50 L 40 50 L 35 54 L 37 59 L 32 55 L 27 59 L 29 54 L 24 50 L 30 50 Z" fill="#FDB022"/>
+                        <path d="M 26 35 L 28 40 L 34 40 L 29 44 L 31 49 L 26 45 L 21 49 L 23 44 L 18 40 L 24 40 Z" fill="#FDB022"/>
+                        
+                        <!-- Text -->
+                        <text x="55" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1a3a6b">
+                            ATLANTA METRO
+                        </text>
+                        <text x="55" y="55" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#2c5aa0">
+                            Porta Potty Reviews
+                        </text>
+                        
+                        <!-- Check accent -->
+                        <path d="M 310 28 L 318 38 L 335 20" 
+                              stroke="#28a745" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <button class="download-btn" onclick="downloadSVG('logo-text')">Download SVG</button>
+                <button class="download-btn" onclick="downloadPNG('logo-text', 700, 160)">Download PNG</button>
+            </div>
+
+            <!-- Logo Option 6: Favicon -->
+            <div class="logo-item">
+                <h3>Favicon</h3>
+                <p>For browser tabs (16x16, 32x32, 64x64)</p>
+                <div class="logo-preview">
+                    <svg id="favicon" width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <rect width="64" height="64" rx="8" fill="#1a3a6b"/>
+                        
+                        <!-- Badge shape -->
+                        <path d="M 32 12 L 48 18 L 52 32 L 42 50 L 32 54 L 22 50 L 12 32 L 16 18 Z" 
+                              fill="#2c5aa0"/>
+                        
+                        <!-- 5 Stars arranged in circle -->
+                        <path d="M 32 20 L 34 25 L 40 25 L 35 29 L 37 34 L 32 30 L 27 34 L 29 29 L 24 25 L 30 25 Z" fill="#FDB022"/>
+                        <path d="M 42 27 L 44 32 L 50 32 L 45 36 L 47 41 L 42 37 L 37 41 L 39 36 L 34 32 L 40 32 Z" fill="#FDB022"/>
+                        <path d="M 40 38 L 42 43 L 48 43 L 43 47 L 45 52 L 40 48 L 35 52 L 37 47 L 32 43 L 38 43 Z" fill="#FDB022"/>
+                        <path d="M 22 27 L 24 32 L 30 32 L 25 36 L 27 41 L 22 37 L 17 41 L 19 36 L 14 32 L 20 32 Z" fill="#FDB022"/>
+                        <path d="M 24 38 L 26 43 L 32 43 L 27 47 L 29 52 L 24 48 L 19 52 L 21 47 L 16 43 L 22 43 Z" fill="#FDB022"/>
+                    </svg>
+                </div>
+                <button class="download-btn" onclick="downloadPNG('favicon', 64, 64)">64x64 PNG</button>
+                <button class="download-btn" onclick="downloadPNG('favicon', 32, 32)">32x32 PNG</button>
+                <button class="download-btn" onclick="downloadPNG('favicon', 16, 16)">16x16 PNG</button>
+            </div>
+        </div>
+
+        <div class="usage-guide">
+            <h2>Brand Colors</h2>
+            <div class="color-preview">
+                <div>
+                    <div class="color-box" style="background: #1a3a6b;"></div>
+                    <p style="text-align: center; margin: 0.5rem 0 0 0; font-size: 0.8rem;">#1a3a6b<br>Navy Blue</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background: #2c5aa0;"></div>
+                    <p style="text-align: center; margin: 0.5rem 0 0 0; font-size: 0.8rem;">#2c5aa0<br>Medium Blue</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background: #FDB022;"></div>
+                    <p style="text-align: center; margin: 0.5rem 0 0 0; font-size: 0.8rem;">#FDB022<br>Gold (5 Stars)</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background: #28a745;"></div>
+                    <p style="text-align: center; margin: 0.5rem 0 0 0; font-size: 0.8rem;">#28a745<br>Green (Trust)</p>
+                </div>
+                <div>
+                    <div class="color-box" style="background: #ffffff; border-color: #333;"></div>
+                    <p style="text-align: center; margin: 0.5rem 0 0 0; font-size: 0.8rem;">#ffffff<br>White</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 2rem;">Usage Guidelines</h2>
+            <ul style="line-height: 1.8; color: #333;">
+                <li><strong>Website Header:</strong> Use Full Horizontal Logo</li>
+                <li><strong>Social Media:</strong> Use Square Logo (Facebook, Instagram, LinkedIn)</li>
+                <li><strong>Browser Tab:</strong> Use Favicon (16x16 or 32x32)</li>
+                <li><strong>Business Cards:</strong> Use Vertical Logo or Icon Only</li>
+                <li><strong>Email Signature:</strong> Use Horizontal Logo (smaller size)</li>
+                <li><strong>Print Materials:</strong> Use any logo, ensure 300 DPI for printing</li>
+            </ul>
+
+            <h2 style="margin-top: 2rem;">File Formats</h2>
+            <ul style="line-height: 1.8; color: #333;">
+                <li><strong>SVG:</strong> Best for websites (scalable, small file size)</li>
+                <li><strong>PNG:</strong> For social media, email, documents (transparent background)</li>
+                <li><strong>Recommended:</strong> Save both formats for flexibility</li>
+            </ul>
+
+            <h2 style="margin-top: 2rem;">How to Use Logo on Your Website</h2>
+            <p style="color: #666; line-height: 1.8;">
+                1. Download the "Full Horizontal Logo" SVG<br>
+                2. Save it as <code>logo.svg</code> in your project<br>
+                3. Replace the text logo in your header with: <code>&lt;img src="logo.svg" alt="Atlanta Metro Porta Potty Reviews" height="60"&gt;</code>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function downloadSVG(elementId) {
+            // Get the SVG element
+            const svg = document.getElementById(elementId) || document.querySelector(`#${elementId}`);
+            
+            // If elementId doesn't have # prefix, try finding by class or direct query
+            let svgElement = svg;
+            if (!svgElement) {
+                // For the horizontal logo which doesn't have an ID
+                svgElement = document.querySelector('.logo-item svg');
+            }
+            
+            // Serialize the SVG
+            const serializer = new XMLSerializer();
+            const svgString = serializer.serializeToString(svgElement);
+            
+            // Create blob and download
+            const blob = new Blob([svgString], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `atlanta-metro-pp-${elementId}.svg`;
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadPNG(elementId, width, height) {
+            const svg = document.getElementById(elementId) || document.querySelector('.logo-item svg');
+            
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            // Serialize SVG
+            const serializer = new XMLSerializer();
+            const svgString = serializer.serializeToString(svg);
+            
+            // Create image from SVG
+            const img = new Image();
+            const blob = new Blob([svgString], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, width, height);
+                canvas.toBlob(function(pngBlob) {
+                    const pngUrl = URL.createObjectURL(pngBlob);
+                    const link = document.createElement('a');
+                    link.href = pngUrl;
+                    link.download = `atlanta-metro-pp-${elementId}-${width}x${height}.png`;
+                    link.click();
+                    URL.revokeObjectURL(url);
+                    URL.revokeObjectURL(pngUrl);
+                });
+            };
+            
+            img.src = url;
+        }
+    </script>
+</body>
+</html>

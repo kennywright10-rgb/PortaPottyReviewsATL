@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porta Potty Rental Blog | Atlanta Metro Porta Potty Reviews</title>
-    <meta name="description" content="Expert tips, guides, and advice for portable restroom rentals in Atlanta Metro. Learn how to choose the right porta potty for your event or construction site.">
-    <meta name="keywords" content="porta potty blog, portable restroom tips, event planning, construction site restrooms, Atlanta">
+    <title>Porta Potty Rental FAQ | Atlanta Metro Porta Potty Reviews</title>
+    <meta name="description" content="Frequently asked questions about porta potty rentals in Atlanta Metro. Get answers about pricing, delivery, cleaning, event planning, and more.">
+    <meta name="keywords" content="porta potty FAQ, portable restroom questions, rental guide, Atlanta porta potty, event planning">
     <style>
         * {
             margin: 0;
@@ -84,161 +84,121 @@
 
         /* Main Content */
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 3rem auto;
             padding: 0 20px;
         }
 
-        /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .blog-card {
+        .faq-intro {
             background: white;
+            padding: 2rem;
             border-radius: 10px;
-            overflow: hidden;
+            margin-bottom: 2rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
         }
 
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        .faq-intro h2 {
+            color: #1a3a6b;
+            margin-bottom: 1rem;
         }
 
-        .blog-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background: #e0e0e0;
-        }
-
-        .blog-content {
-            padding: 1.5rem;
-        }
-
-        .blog-meta {
-            display: flex;
+        /* FAQ Items */
+        .faq-list {
+            display: grid;
             gap: 1rem;
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
         }
 
-        .blog-title {
-            color: #1a3a6b;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-excerpt {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .read-more {
-            color: #2c5aa0;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .read-more:hover {
-            color: #dc143c;
-        }
-
-        /* Single Post View */
-        .single-post {
-            display: none;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .single-post.active {
-            display: block;
-        }
-
-        .post-header {
+        .faq-item {
             background: white;
-            padding: 2rem;
             border-radius: 10px;
-            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
         }
 
-        .post-image {
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border: none;
             width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-
-        .post-title {
+            text-align: left;
+            font-size: 1.1rem;
             color: #1a3a6b;
-            font-size: 2.5rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-question .icon {
+            font-size: 1.5rem;
+            color: #2c5aa0;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
             margin-bottom: 1rem;
-        }
-
-        .post-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .post-body {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
             line-height: 1.8;
         }
 
-        .post-body h2 {
-            color: #1a3a6b;
-            margin-top: 2rem;
+        .faq-answer ul {
             margin-bottom: 1rem;
-        }
-
-        .post-body h3 {
-            color: #2c5aa0;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .post-body p {
-            margin-bottom: 1.5rem;
-        }
-
-        .post-body ul, .post-body ol {
-            margin-bottom: 1.5rem;
             padding-left: 2rem;
         }
 
-        .post-body li {
+        .faq-answer li {
             margin-bottom: 0.5rem;
         }
 
-        .back-to-blog {
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            cursor: pointer;
+        /* Category Filters */
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
             margin-bottom: 2rem;
-            text-decoration: none;
-            display: inline-block;
+            justify-content: center;
         }
 
-        .back-to-blog:hover {
-            background-color: #5a6268;
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid #2c5aa0;
+            border-radius: 25px;
+            color: #2c5aa0;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background: #2c5aa0;
+            color: white;
         }
 
         /* Footer */
@@ -356,26 +316,28 @@
             background: #218838;
         }
 
-        .blog-list-admin {
+        .faq-list-admin {
             display: grid;
             gap: 1rem;
         }
 
-        .blog-item-admin {
+        .faq-item-admin {
             background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 8px;
             border-left: 4px solid #2c5aa0;
         }
 
-        .blog-item-header {
+        .faq-item-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: start;
+            gap: 1rem;
         }
 
-        .blog-item-header h4 {
+        .faq-item-header h4 {
             color: #1a3a6b;
+            flex: 1;
         }
 
         .admin-btn-group {
@@ -422,7 +384,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 0.8rem;
             border: 2px solid #e0e0e0;
@@ -432,12 +395,13 @@
         }
 
         .form-group textarea {
-            min-height: 300px;
+            min-height: 150px;
             resize: vertical;
         }
 
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: #2c5aa0;
         }
@@ -502,30 +466,23 @@
             margin-bottom: 1rem;
         }
 
-        .image-preview {
-            max-width: 300px;
-            max-height: 200px;
-            margin-top: 1rem;
-            border-radius: 5px;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
 
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .post-title {
-                font-size: 2rem;
-            }
-
             nav ul {
                 flex-direction: column;
                 gap: 0.5rem;
+            }
+
+            .category-filters {
+                justify-content: flex-start;
+            }
+
+            .faq-question {
+                font-size: 1rem;
             }
         }
     </style>
@@ -545,22 +502,22 @@
     </header>
 
     <section class="hero">
-        <h1>Porta Potty Rental Blog</h1>
-        <p>Expert tips, guides, and advice for portable restroom rentals</p>
+        <h1>Frequently Asked Questions</h1>
+        <p>Get answers to your porta potty rental questions</p>
     </section>
 
     <div class="container">
-        <!-- Blog Grid View -->
-        <div id="blogGridView">
-            <div id="blogGrid" class="blog-grid">
-                <!-- Blog posts will be loaded here -->
-            </div>
+        <div class="faq-intro">
+            <h2>Everything You Need to Know About Porta Potty Rentals</h2>
+            <p>Planning an event or managing a construction site? We've compiled the most common questions about portable restroom rentals in the Atlanta Metro area. Can't find your answer? Contact one of our featured companies for personalized assistance.</p>
         </div>
 
-        <!-- Single Post View -->
-        <div id="singlePostView" class="single-post">
-            <button class="back-to-blog" onclick="backToBlog()">← Back to Blog</button>
-            <div id="singlePostContent"></div>
+        <div class="category-filters" id="categoryFilters">
+            <button class="category-btn active" data-category="all">All Questions</button>
+        </div>
+
+        <div class="faq-list" id="faqList">
+            <!-- FAQ items will be loaded here -->
         </div>
     </div>
 
@@ -580,7 +537,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br>info@atlmetropp.com</p>
+                <p>Atlanta Metro Porta Potty Reviews<br>(678) 456-3488<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5dcdbd3daf5d4c1d9d8d0c1c7dac5c59bd6dad8">[email&#160;protected]</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -609,65 +566,60 @@
 
             <div id="adminPanel" style="display: none;">
                 <div class="admin-header">
-                    <h2>Blog Admin Panel</h2>
+                    <h2>FAQ Admin Panel</h2>
                     <button class="close-admin" onclick="closeAdmin()">Close</button>
                 </div>
 
                 <div id="adminMessage" style="display: none;"></div>
 
-                <button class="add-btn" onclick="showAddPostForm()">+ Add New Blog Post</button>
+                <button class="add-btn" onclick="showAddFAQForm()">+ Add New FAQ</button>
 
-                <div id="addPostForm" style="display: none;"></div>
+                <div id="addFAQForm" style="display: none;"></div>
 
-                <div id="blogListAdmin" class="blog-list-admin">
-                    <!-- Blog posts will be loaded here -->
+                <div id="faqListAdmin" class="faq-list-admin">
+                    <!-- FAQ items will be loaded here -->
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        let blogPosts = [];
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        let faqData = [];
         let isLoggedIn = false;
+        let currentCategory = 'all';
 
         // Initialize
-        async function initBlog() {
-            await loadBlogData();
-            renderBlogGrid();
-            
-            // Check if URL has post slug
-            const urlParams = new URLSearchParams(window.location.search);
-            const postSlug = urlParams.get('post');
-            if (postSlug) {
-                showPost(postSlug);
-            }
+        async function initFAQ() {
+            await loadFAQData();
+            renderFAQ();
+            renderCategories();
         }
 
-        // Load blog data from API
-        async function loadBlogData() {
+        // Load FAQ data from API
+        async function loadFAQData() {
             try {
-                const response = await fetch('/api/blog');
+                const response = await fetch('/api/faq');
                 if (response.ok) {
                     const data = await response.json();
-                    blogPosts = data.posts || [];
+                    faqData = data.faqs || [];
                 } else {
-                    blogPosts = getDefaultBlogPosts();
+                    faqData = getDefaultFAQData();
                 }
             } catch (error) {
-                console.error('Error loading blog data:', error);
-                blogPosts = getDefaultBlogPosts();
+                console.error('Error loading FAQ data:', error);
+                faqData = getDefaultFAQData();
             }
         }
 
-        // Save blog data
-        async function saveBlogData() {
+        // Save FAQ data
+        async function saveFAQData() {
             try {
-                const response = await fetch('/api/blog', {
+                const response = await fetch('/api/faq', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ posts: blogPosts })
+                    body: JSON.stringify({ faqs: faqData })
                 });
                 
                 if (!response.ok) {
@@ -676,338 +628,142 @@
                 
                 return true;
             } catch (error) {
-                console.error('Error saving blog data:', error);
+                console.error('Error saving FAQ data:', error);
                 return false;
             }
         }
 
-        // Default blog posts
-        function getDefaultBlogPosts() {
+        // Default FAQ data
+        function getDefaultFAQData() {
             return [
                 {
-                    id: 'how-many-porta-potties',
-                    title: 'How Many Porta Potties Do I Need for My Event?',
-                    slug: 'how-many-porta-potties',
-                    excerpt: 'Planning an outdoor event? Learn the industry-standard ratios for determining the right number of portable restrooms based on your guest count, event duration, and type.',
-                    content: `<p>One of the most common questions we hear from event planners is: "How many porta potties do I need?" The answer depends on several factors, including your guest count, event duration, and whether alcohol will be served.</p>
-
-<h2>General Guidelines</h2>
-
-<p>For a 4-hour event without alcohol, the standard ratio is:</p>
-<ul>
-<li>1 porta potty per 50 guests for the first 4 hours</li>
-<li>Add 1 additional unit per 50 guests for each additional 4 hours</li>
-<li>At least 1 ADA-compliant unit for events with 100+ guests</li>
-</ul>
-
-<h2>Events Serving Alcohol</h2>
-
-<p>When alcohol is being served, usage increases by approximately 30-40%. For these events, we recommend:</p>
-<ul>
-<li>1 porta potty per 35-40 guests</li>
-<li>Consider adding hand washing stations</li>
-<li>Plan for more frequent servicing if it's an all-day event</li>
-</ul>
-
-<h2>Special Considerations</h2>
-
-<h3>Weddings</h3>
-<p>For outdoor weddings, consider renting luxury restroom trailers instead of standard units. Your guests will appreciate the upscale amenities, and it's worth the investment for such an important day.</p>
-
-<h3>Construction Sites</h3>
-<p>OSHA requires 1 toilet for every 20 workers. For construction sites, durability and regular servicing are more important than aesthetics.</p>
-
-<h3>Festivals and Concerts</h3>
-<p>Large public events require more units due to longer duration and inability to control guest flow. Plan for 1 unit per 30-40 people, with separate facilities for staff and VIP areas.</p>
-
-<h2>Pro Tips</h2>
-<ul>
-<li>Always round up when calculating your needs</li>
-<li>Place units in convenient, well-lit areas</li>
-<li>Consider separate units for men and women at larger events</li>
-<li>Add hand washing stations for events involving food</li>
-<li>Have units serviced if your event exceeds 4-6 hours</li>
-</ul>
-
-<p>Still not sure? Most porta potty rental companies in Atlanta Metro offer free consultations to help you determine your exact needs. Don't hesitate to reach out for expert advice!</p>`,
-                    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=500&fit=crop',
-                    date: '2026-01-28',
-                    author: 'Atlanta Metro PP Reviews'
+                    id: 'faq-1',
+                    question: 'How many porta potties do I need for my event?',
+                    answer: '<p>The number of porta potties needed depends on several factors including guest count, event duration, and whether alcohol is served.</p><p><strong>General Guidelines:</strong></p><ul><li>1 porta potty per 50 guests for events up to 4 hours</li><li>1 porta potty per 35-40 guests if alcohol is served</li><li>At least 1 ADA-compliant unit for events with 100+ guests</li><li>Add more units for events longer than 4 hours</li></ul><p>Most rental companies offer free consultations to help determine your exact needs.</p>',
+                    category: 'Planning',
+                    order: 1
                 },
                 {
-                    id: 'porta-potty-wedding-guide',
-                    title: 'The Ultimate Guide to Porta Potties for Outdoor Weddings',
-                    slug: 'porta-potty-wedding-guide',
-                    excerpt: 'Planning an outdoor wedding? Discover how luxury restroom trailers can elevate your special day while keeping guests comfortable and happy.',
-                    content: `<p>Your wedding day should be perfect, and that includes ensuring your guests have access to clean, comfortable restroom facilities. If you're planning an outdoor wedding in the Atlanta Metro area, here's everything you need to know about portable restrooms.</p>
-
-<h2>Why Luxury Trailers Beat Standard Units</h2>
-
-<p>For weddings, we strongly recommend luxury restroom trailers over standard porta potties. Here's why:</p>
-
-<ul>
-<li><strong>Aesthetics:</strong> They look elegant and blend seamlessly with your venue</li>
-<li><strong>Comfort:</strong> Climate-controlled interior with real sinks, mirrors, and lighting</li>
-<li><strong>Amenities:</strong> Running water, flushing toilets, and even music</li>
-<li><strong>Guest Experience:</strong> Your guests will actually enjoy using them</li>
-</ul>
-
-<h2>How Many Units Do You Need?</h2>
-
-<p>For a wedding with a 5-6 hour reception, we recommend:</p>
-<ul>
-<li>50-75 guests: 1 luxury trailer (typically 2-3 stalls)</li>
-<li>75-150 guests: 1 large luxury trailer or 2 smaller units</li>
-<li>150+ guests: 2 luxury trailers, strategically placed</li>
-</ul>
-
-<h2>Placement Tips</h2>
-
-<h3>Location, Location, Location</h3>
-<p>Place restrooms:</p>
-<ul>
-<li>Close enough to be convenient (within 200 feet)</li>
-<li>Far enough to maintain ambiance</li>
-<li>On level ground with proper lighting</li>
-<li>Away from food service areas</li>
-<li>Near the dance floor and bar (high-traffic areas)</li>
-</ul>
-
-<h3>Signage and Decor</h3>
-<p>Make restrooms easy to find with:</p>
-<ul>
-<li>Elegant directional signs</li>
-<li>Pathway lighting for evening events</li>
-<li>Decorative elements that match your wedding theme</li>
-<li>Attendant for larger weddings (they can restock and maintain)</li>
-</ul>
-
-<h2>Timing Your Rental</h2>
-
-<p>Book your luxury trailer at least 2-3 months in advance, especially for peak wedding season (May-October). Delivery typically happens the day before, and pickup the day after your wedding.</p>
-
-<h2>Cost Considerations</h2>
-
-<p>Luxury trailers typically cost $1,500-$3,500 for a weekend rental in the Atlanta area. While more expensive than standard units, they're a worthwhile investment that your guests will appreciate.</p>
-
-<h2>Questions to Ask Your Rental Company</h2>
-
-<ul>
-<li>What's included in the rental price?</li>
-<li>Is there an attendant service available?</li>
-<li>What happens if there's bad weather?</li>
-<li>How is the unit powered and connected to water?</li>
-<li>What's your cancellation policy?</li>
-<li>Do you provide restocking supplies during the event?</li>
-</ul>
-
-<h2>Final Thoughts</h2>
-
-<p>Don't let portable restrooms be an afterthought in your wedding planning. The right facilities can actually enhance your guest experience, while the wrong choice can become a memorable (for the wrong reasons) part of your special day.</p>
-
-<p>Most couples find that investing in luxury restroom trailers is one of the best decisions they made for their outdoor wedding. Your guests will thank you!</p>`,
-                    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=500&fit=crop',
-                    date: '2026-01-25',
-                    author: 'Atlanta Metro PP Reviews'
+                    id: 'faq-2',
+                    question: 'How much does it cost to rent a porta potty in Atlanta?',
+                    answer: '<p>Porta potty rental costs in the Atlanta Metro area vary based on several factors:</p><p><strong>Standard Unit:</strong> $80-$175 per day, $100-$200 per week, $150-$300 per month</p><p><strong>Luxury Trailer:</strong> $1,500-$3,500 for a weekend rental</p><p><strong>ADA-Compliant Unit:</strong> $125-$225 per day</p><p><strong>Hand Washing Station:</strong> $155 per week</p><p>Prices include delivery, pickup, and standard servicing. Additional fees may apply for same-day delivery, extended distances, or extra servicing.</p>',
+                    category: 'Pricing',
+                    order: 2
                 },
                 {
-                    id: 'construction-site-requirements',
-                    title: 'OSHA Porta Potty Requirements for Construction Sites',
-                    slug: 'construction-site-requirements',
-                    excerpt: 'Stay compliant with OSHA regulations for portable restrooms on construction sites. Learn about requirements, placement guidelines, and best practices.',
-                    content: `<p>Construction site managers need to be aware of OSHA's strict requirements for portable restroom facilities. Non-compliance can result in citations and fines. Here's what you need to know to stay compliant.</p>
-
-<h2>OSHA Basic Requirements</h2>
-
-<p>According to OSHA Standard 1926.51, construction sites must provide:</p>
-
-<ul>
-<li>1 toilet facility per 20 employees</li>
-<li>Facilities available within 5 minutes of work areas</li>
-<li>Toilets maintained in a clean and sanitary condition</li>
-<li>Toilet paper and hand washing facilities</li>
-</ul>
-
-<h2>Hand Washing Stations</h2>
-
-<p>OSHA requires hand washing facilities adjacent to toilets, which must include:</p>
-<ul>
-<li>Clean water</li>
-<li>Soap or similar cleansing agent</li>
-<li>Individual hand towels or air blowers</li>
-</ul>
-
-<h3>Compliance Tips</h3>
-<p>Many companies rent combination units (porta potty with integrated hand washing station) to ensure compliance and convenience.</p>
-
-<h2>Servicing Requirements</h2>
-
-<p>While OSHA doesn't specify exact servicing schedules, facilities must be maintained in a "clean and sanitary condition." Best practices include:</p>
-
-<ul>
-<li>Weekly servicing for standard projects</li>
-<li>Twice-weekly for sites with 20+ workers</li>
-<li>Daily servicing for high-traffic or critical projects</li>
-<li>Immediate attention to complaints or issues</li>
-</ul>
-
-<h2>Placement Guidelines</h2>
-
-<h3>Accessibility</h3>
-<p>Place units where they're easily accessible:</p>
-<ul>
-<li>Within 5-minute walk of work areas</li>
-<li>On stable, level ground</li>
-<li>Away from heavy equipment operation zones</li>
-<li>Protected from job site hazards</li>
-</ul>
-
-<h3>Multiple Story Buildings</h3>
-<p>For multi-story construction, units should be available on every floor or within reasonable distance via stairs/elevators.</p>
-
-<h2>ADA Requirements</h2>
-
-<p>While under construction, sites must provide ADA-accessible facilities if:</p>
-<ul>
-<li>You have employees with disabilities</li>
-<li>The site is open to the public</li>
-<li>Federal contracts require it</li>
-</ul>
-
-<h2>Documentation</h2>
-
-<p>Maintain records of:</p>
-<ul>
-<li>Number of units on site</li>
-<li>Servicing schedule and completion</li>
-<li>Complaints and resolutions</li>
-<li>Compliance checks</li>
-</ul>
-
-<h2>Seasonal Considerations</h2>
-
-<h3>Summer</h3>
-<ul>
-<li>More frequent servicing needed due to heat</li>
-<li>Ensure proper ventilation</li>
-<li>Consider adding air-conditioned units for crew comfort</li>
-</ul>
-
-<h3>Winter</h3>
-<ul>
-<li>Heated units may be necessary</li>
-<li>Ensure water lines don't freeze</li>
-<li>Anti-freeze solutions in holding tanks</li>
-</ul>
-
-<h2>Common Violations</h2>
-
-<p>Avoid these common OSHA citations:</p>
-<ul>
-<li>Insufficient number of facilities</li>
-<li>Lack of hand washing stations</li>
-<li>Poor maintenance/unsanitary conditions</li>
-<li>Units too far from work areas</li>
-<li>No toilet paper or supplies</li>
-</ul>
-
-<h2>Best Practices for Site Managers</h2>
-
-<ol>
-<li>Schedule regular inspections of facilities</li>
-<li>Designate someone responsible for monitoring</li>
-<li>Have backup plan for servicing delays</li>
-<li>Post emergency service provider contact information</li>
-<li>Include facilities in your site safety plan</li>
-<li>Brief all workers on facility locations and policies</li>
-</ol>
-
-<h2>Cost vs. Compliance</h2>
-
-<p>OSHA fines for sanitation violations can range from $1,000 to $13,000+ per violation. The cost of proper porta potty rentals is minimal compared to potential fines and, more importantly, worker satisfaction and productivity.</p>
-
-<p>Remember: providing adequate, clean facilities isn't just about compliance—it's about respecting your workers and maintaining a productive, safe job site.</p>`,
-                    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop',
-                    date: '2026-01-22',
-                    author: 'Atlanta Metro PP Reviews'
+                    id: 'faq-3',
+                    question: 'How far in advance should I book a porta potty rental?',
+                    answer: '<p>Booking timelines depend on your event type and season:</p><ul><li><strong>Standard Events:</strong> 1-2 weeks in advance</li><li><strong>Large Events/Weddings:</strong> 2-3 months in advance</li><li><strong>Peak Season (May-October):</strong> 3-4 months in advance for luxury trailers</li><li><strong>Construction Sites:</strong> 1 week minimum</li><li><strong>Emergency/Last Minute:</strong> Many companies offer same-day or next-day service (additional fees may apply)</li></ul><p>During peak wedding season and festival months, popular dates book quickly, so earlier is always better.</p>',
+                    category: 'Planning',
+                    order: 3
+                },
+                {
+                    id: 'faq-4',
+                    question: 'How often are porta potties cleaned and serviced?',
+                    answer: '<p>Standard servicing schedule:</p><ul><li><strong>One-Day Events:</strong> Pre-stocked before event, cleaned after pickup</li><li><strong>Weekend Events:</strong> Serviced before and after</li><li><strong>Weekly Rentals:</strong> Serviced once per week</li><li><strong>Monthly Rentals:</strong> Serviced weekly or bi-weekly</li><li><strong>High-Traffic Events:</strong> Daily or even multiple times per day</li></ul><p>Servicing includes pumping waste, refilling water, restocking supplies (toilet paper, hand sanitizer), and sanitizing the unit. Additional servicing visits can be arranged for an extra fee.</p>',
+                    category: 'Maintenance',
+                    order: 4
+                },
+                {
+                    id: 'faq-5',
+                    question: 'What is included in a porta potty rental?',
+                    answer: '<p>Standard rental includes:</p><ul><li>Delivery and setup at your specified location</li><li>The porta potty unit itself (clean and sanitized)</li><li>Toilet paper (2+ rolls)</li><li>Hand sanitizer dispenser with sanitizer</li><li>Urinal (in most standard units)</li><li>Ventilation system</li><li>Door lock with occupancy indicator</li><li>Weekly servicing for long-term rentals</li><li>Pickup and removal after rental period</li></ul><p><strong>Optional Add-ons:</strong></p><ul><li>Hand washing stations</li><li>Luxury trailer upgrades</li><li>Extra servicing visits</li><li>Lighting (solar or battery powered)</li><li>Air conditioning/heating</li><li>Attendant service</li></ul>',
+                    category: 'Services',
+                    order: 5
+                },
+                {
+                    id: 'faq-6',
+                    question: 'Do you need a permit for a porta potty in Atlanta?',
+                    answer: '<p>Permit requirements vary by location within the Atlanta Metro area:</p><p><strong>Generally NOT Required For:</strong></p><ul><li>Private property (your yard, private venue)</li><li>Short-term events (1-2 days)</li><li>Construction sites (already permitted for construction)</li></ul><p><strong>May Require Permit For:</strong></p><ul><li>Public property or parks</li><li>Street placement or right-of-way</li><li>Large public events</li><li>Long-term placement in certain municipalities</li></ul><p>Check with your local city hall or HOA before your event. Most rental companies can advise on local requirements. Popular areas include:</p><ul><li>City of Atlanta: Contact Special Events Permits</li><li>Fulton County Parks: Requires permit application</li><li>Gwinnett County: Check with Parks & Recreation</li><li>Cobb County: Varies by city within county</li></ul>',
+                    category: 'Regulations',
+                    order: 6
+                },
+                {
+                    id: 'faq-7',
+                    question: 'What are OSHA requirements for construction site porta potties?',
+                    answer: '<p>OSHA Standard 1926.51 requires construction sites to provide:</p><ul><li><strong>1 toilet facility per 20 employees</strong></li><li>Facilities within 5 minutes of work areas (or within 200 feet)</li><li>Hand washing facilities with soap and clean water</li><li>Toilets maintained in clean and sanitary condition</li><li>Toilet paper at each facility</li><li>Individual hand towels or air blowers</li></ul><p><strong>Best Practices:</strong></p><ul><li>Weekly servicing minimum (more for 20+ workers)</li><li>ADA-accessible units when required</li><li>Combination units (toilet + hand wash) for easy compliance</li><li>Posted servicing schedule</li><li>Emergency service contact information</li></ul><p>Non-compliance can result in OSHA citations and fines from $1,000 to $13,000+ per violation.</p>',
+                    category: 'Regulations',
+                    order: 7
+                },
+                {
+                    id: 'faq-8',
+                    question: 'What\'s the difference between a standard porta potty and a luxury restroom trailer?',
+                    answer: '<p><strong>Standard Porta Potty:</strong></p><ul><li>Single unit, plastic construction</li><li>Basic toilet and urinal</li><li>Hand sanitizer dispenser</li><li>No running water</li><li>No climate control</li><li>Cost: $80-$175 per day</li><li>Best for: Construction sites, casual outdoor events, festivals</li></ul><p><strong>Luxury Restroom Trailer:</strong></p><ul><li>Multi-stall trailer (2-25 stalls)</li><li>Real flushing toilets and sinks</li><li>Running water and mirrors</li><li>Air conditioning and heating</li><li>Interior lighting and music</li><li>Elegant interior finishes</li><li>Cost: $1,500-$3,500 per weekend</li><li>Best for: Weddings, corporate events, VIP areas, upscale gatherings</li></ul><p>Luxury trailers provide a much more comfortable experience and are worth the investment for events where guest comfort is a priority.</p>',
+                    category: 'Types',
+                    order: 8
+                },
+                {
+                    id: 'faq-9',
+                    question: 'Where should porta potties be placed at my event?',
+                    answer: '<p><strong>Ideal Placement Guidelines:</strong></p><ul><li><strong>Distance:</strong> Within 200 feet of main event area but not so close you can smell them</li><li><strong>Accessibility:</strong> On level ground, easily accessible by all guests</li><li><strong>Lighting:</strong> Well-lit area or add lighting for evening events</li><li><strong>Traffic Flow:</strong> Near high-traffic areas (bar, dance floor) but not blocking pathways</li><li><strong>Away From:</strong> Food service areas, dining areas, stages/speakers</li><li><strong>Delivery Access:</strong> Within 35 feet of where truck can park</li><li><strong>Gate Width:</strong> Minimum 48 inches if going through a gate</li></ul><p><strong>Additional Tips:</strong></p><ul><li>Add directional signage for easy finding</li><li>Separate men\'s and women\'s for larger events</li><li>Place ADA units on accessible routes</li><li>Consider wind direction (odor management)</li><li>Ensure units won\'t be visible in event photos if possible</li></ul>',
+                    category: 'Planning',
+                    order: 9
+                },
+                {
+                    id: 'faq-10',
+                    question: 'Can porta potties be used in winter weather in Atlanta?',
+                    answer: '<p>Yes! Porta potties can be used year-round in Atlanta, though winter requires some special considerations:</p><p><strong>Cold Weather Solutions:</strong></p><ul><li><strong>Heated Units:</strong> Available with built-in heaters for extreme cold</li><li><strong>Anti-Freeze:</strong> Added to holding tanks to prevent freezing</li><li><strong>Insulated Units:</strong> Better temperature retention</li><li><strong>Regular Servicing:</strong> Prevents water line freezing</li></ul><p><strong>Atlanta\'s Mild Winters:</strong></p><p>Atlanta rarely experiences prolonged freezing temperatures, so standard units work fine for most winter events. However, if temperatures are expected to drop below 32°F for extended periods:</p><ul><li>Request heated units for multi-day events</li><li>Ensure anti-freeze treatment is included</li><li>Schedule delivery closer to event time</li><li>Consider backup indoor facilities if available</li></ul><p>Most Atlanta porta potty companies are experienced with winter rentals and will recommend appropriate solutions based on your specific dates and forecast.</p>',
+                    category: 'Seasonal',
+                    order: 10
                 }
             ];
         }
 
-        // Render blog grid
-        function renderBlogGrid() {
-            const grid = document.getElementById('blogGrid');
-            
-            if (blogPosts.length === 0) {
-                grid.innerHTML = '<p style="text-align: center; color: #666; grid-column: 1/-1;">No blog posts yet. Check back soon!</p>';
-                return;
-            }
+        // Render FAQ items
+        function renderFAQ() {
+            const list = document.getElementById('faqList');
+            const filtered = currentCategory === 'all' ? 
+                faqData : 
+                faqData.filter(faq => faq.category === currentCategory);
 
-            grid.innerHTML = blogPosts.map(post => `
-                <article class="blog-card" onclick="showPost('${post.slug}')">
-                    <img src="${post.image}" alt="${post.title}" class="blog-image" onerror="this.src='https://via.placeholder.com/400x250/2c5aa0/ffffff?text=Blog+Post'">
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>📅 ${formatDate(post.date)}</span>
-                            <span>✍️ ${post.author}</span>
-                        </div>
-                        <h2 class="blog-title">${post.title}</h2>
-                        <p class="blog-excerpt">${post.excerpt}</p>
-                        <a href="#" class="read-more" onclick="showPost('${post.slug}'); return false;">Read More →</a>
+            const sorted = filtered.sort((a, b) => a.order - b.order);
+
+            list.innerHTML = sorted.map(faq => `
+                <div class="faq-item" data-category="${faq.category}">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>${faq.question}</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        ${faq.answer}
                     </div>
-                </article>
+                </div>
             `).join('');
         }
 
-        // Show single post
-        function showPost(slug) {
-            const post = blogPosts.find(p => p.slug === slug);
-            if (!post) return;
-
-            document.getElementById('blogGridView').style.display = 'none';
-            document.getElementById('singlePostView').classList.add('active');
-
-            const content = document.getElementById('singlePostContent');
-            content.innerHTML = `
-                <article>
-                    <div class="post-header">
-                        <h1 class="post-title">${post.title}</h1>
-                        <div class="post-meta">
-                            📅 ${formatDate(post.date)} | ✍️ ${post.author}
-                        </div>
-                    </div>
-                    ${post.image ? `<img src="${post.image}" alt="${post.title}" class="post-image" onerror="this.style.display='none'">` : ''}
-                    <div class="post-body">
-                        ${post.content}
-                    </div>
-                </article>
-            `;
-
-            // Update URL without reload
-            const url = new URL(window.location);
-            url.searchParams.set('post', slug);
-            window.history.pushState({}, '', url);
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Render category filters
+        function renderCategories() {
+            const categories = ['all', ...new Set(faqData.map(faq => faq.category))];
+            const filters = document.getElementById('categoryFilters');
+            
+            filters.innerHTML = categories.map(cat => `
+                <button class="category-btn ${cat === currentCategory ? 'active' : ''}" 
+                        data-category="${cat}" 
+                        onclick="filterCategory('${cat}')">
+                    ${cat === 'all' ? 'All Questions' : cat}
+                </button>
+            `).join('');
         }
 
-        // Back to blog grid
-        function backToBlog() {
-            document.getElementById('blogGridView').style.display = 'block';
-            document.getElementById('singlePostView').classList.remove('active');
-
-            // Update URL
-            const url = new URL(window.location);
-            url.searchParams.delete('post');
-            window.history.pushState({}, '', url);
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Toggle FAQ item
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const wasActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            // Open clicked item if it wasn't active
+            if (!wasActive) {
+                item.classList.add('active');
+            }
         }
 
-        // Format date
-        function formatDate(dateString) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString('en-US', options);
+        // Filter by category
+        function filterCategory(category) {
+            currentCategory = category;
+            renderFAQ();
+            renderCategories();
         }
 
         // Admin functions
@@ -1016,7 +772,7 @@
             if (isLoggedIn) {
                 document.getElementById('loginSection').style.display = 'none';
                 document.getElementById('adminPanel').style.display = 'block';
-                loadPostsAdmin();
+                loadFAQAdmin();
             }
         }
 
@@ -1036,176 +792,157 @@
                 document.getElementById('loginSection').style.display = 'none';
                 document.getElementById('adminPanel').style.display = 'block';
                 document.getElementById('loginError').style.display = 'none';
-                loadPostsAdmin();
+                loadFAQAdmin();
             } else {
                 document.getElementById('loginError').textContent = 'Invalid username or password';
                 document.getElementById('loginError').style.display = 'block';
             }
         }
 
-        // Load posts in admin
-        function loadPostsAdmin() {
-            const list = document.getElementById('blogListAdmin');
-            list.innerHTML = blogPosts.map(post => `
-                <div class="blog-item-admin">
-                    <div class="blog-item-header">
-                        <div>
-                            <h4>${post.title}</h4>
-                            <p style="color: #666; font-size: 0.9rem;">${formatDate(post.date)} | ${post.author}</p>
+        // Load FAQ in admin
+        function loadFAQAdmin() {
+            const list = document.getElementById('faqListAdmin');
+            const sorted = [...faqData].sort((a, b) => a.order - b.order);
+            
+            list.innerHTML = sorted.map(faq => `
+                <div class="faq-item-admin">
+                    <div class="faq-item-header">
+                        <div style="flex: 1;">
+                            <h4>${faq.question}</h4>
+                            <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Category: ${faq.category} | Order: ${faq.order}</p>
                         </div>
                         <div class="admin-btn-group">
-                            <button class="edit-btn" onclick='editPost(${JSON.stringify(post).replace(/'/g, "&#39;")})'>Edit</button>
-                            <button class="delete-btn" onclick="deletePost('${post.id}')">Delete</button>
+                            <button class="edit-btn" onclick='editFAQ(${JSON.stringify(faq).replace(/'/g, "&#39;")})'>Edit</button>
+                            <button class="delete-btn" onclick="deleteFAQ('${faq.id}')">Delete</button>
                         </div>
                     </div>
                 </div>
             `).join('');
         }
 
-        // Show add post form
-        function showAddPostForm() {
-            const form = document.getElementById('addPostForm');
+        // Show add FAQ form
+        function showAddFAQForm() {
+            const form = document.getElementById('addFAQForm');
             form.style.display = 'block';
-            form.innerHTML = generatePostForm(null);
+            form.innerHTML = generateFAQForm(null);
             form.scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Generate post form
-        function generatePostForm(post) {
-            const isEdit = post !== null;
+        // Generate FAQ form
+        function generateFAQForm(faq) {
+            const isEdit = faq !== null;
+            const categories = [...new Set(faqData.map(f => f.category))];
             
             return `
                 <div class="edit-form">
-                    <h3 style="color: #1a3a6b; margin-bottom: 1.5rem;">${isEdit ? 'Edit' : 'Add New'} Blog Post</h3>
-                    <form onsubmit="savePost(event, ${isEdit})">
-                        <input type="hidden" name="id" value="${post?.id || ''}">
+                    <h3 style="color: #1a3a6b; margin-bottom: 1.5rem;">${isEdit ? 'Edit' : 'Add New'} FAQ</h3>
+                    <form onsubmit="saveFAQ(event, ${isEdit})">
+                        <input type="hidden" name="id" value="${faq?.id || ''}">
                         
                         <div class="form-group">
-                            <label>Title *</label>
-                            <input type="text" name="title" value="${post?.title || ''}" required>
+                            <label>Question *</label>
+                            <input type="text" name="question" value="${faq?.question || ''}" required>
                         </div>
 
                         <div class="form-group">
-                            <label>URL Slug * (lowercase, use hyphens for spaces)</label>
-                            <input type="text" name="slug" value="${post?.slug || ''}" required placeholder="e.g., how-to-choose-porta-potty">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Excerpt * (Short summary for blog grid)</label>
-                            <textarea name="excerpt" rows="3" required>${post?.excerpt || ''}</textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Image URL *</label>
-                            <input type="url" name="image" value="${post?.image || ''}" required placeholder="https://example.com/image.jpg" onchange="previewImage(this)">
-                            ${post?.image ? `<img src="${post.image}" class="image-preview" id="imagePreview">` : '<img id="imagePreview" class="image-preview" style="display: none;">'}
-                            <small style="color: #666; display: block; margin-top: 0.5rem;">Tip: Use Unsplash.com for free high-quality images. Right-click → Copy image address</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Content * (Use HTML: &lt;p&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;ul&gt;, &lt;li&gt;, etc.)</label>
-                            <textarea name="content" required>${post?.content || ''}</textarea>
+                            <label>Answer * (Use HTML: &lt;p&gt;, &lt;ul&gt;, &lt;li&gt;, &lt;strong&gt;, etc.)</label>
+                            <textarea name="answer" required>${faq?.answer || ''}</textarea>
                             <small style="color: #666; display: block; margin-top: 0.5rem;">
-                                HTML Guide: &lt;h2&gt;Heading&lt;/h2&gt; for sections, &lt;p&gt;paragraph&lt;/p&gt;, &lt;ul&gt;&lt;li&gt;list item&lt;/li&gt;&lt;/ul&gt;
+                                HTML Guide: &lt;p&gt;paragraph&lt;/p&gt;, &lt;ul&gt;&lt;li&gt;list item&lt;/li&gt;&lt;/ul&gt;, &lt;strong&gt;bold&lt;/strong&gt;
                             </small>
                         </div>
 
                         <div class="form-group">
-                            <label>Author</label>
-                            <input type="text" name="author" value="${post?.author || 'Atlanta Metro PP Reviews'}">
+                            <label>Category *</label>
+                            <input type="text" name="category" value="${faq?.category || ''}" required list="categories" placeholder="e.g., Planning, Pricing, Services">
+                            <datalist id="categories">
+                                ${categories.map(cat => `<option value="${cat}">`).join('')}
+                            </datalist>
+                            <small style="color: #666; display: block; margin-top: 0.5rem;">
+                                Enter a new category or select an existing one
+                            </small>
                         </div>
 
                         <div class="form-group">
-                            <label>Publish Date</label>
-                            <input type="date" name="date" value="${post?.date || new Date().toISOString().split('T')[0]}">
+                            <label>Display Order *</label>
+                            <input type="number" name="order" value="${faq?.order || (faqData.length + 1)}" required min="1">
+                            <small style="color: #666; display: block; margin-top: 0.5rem;">
+                                Lower numbers appear first (1, 2, 3...)
+                            </small>
                         </div>
 
                         <div style="margin-top: 2rem;">
-                            <button type="submit" class="save-btn">Save Post</button>
-                            <button type="button" class="cancel-btn" onclick="cancelPostForm()">Cancel</button>
+                            <button type="submit" class="save-btn">Save FAQ</button>
+                            <button type="button" class="cancel-btn" onclick="cancelFAQForm()">Cancel</button>
                         </div>
                     </form>
                 </div>
             `;
         }
 
-        // Preview image
-        function previewImage(input) {
-            const preview = document.getElementById('imagePreview');
-            if (input.value) {
-                preview.src = input.value;
-                preview.style.display = 'block';
-                preview.onerror = function() {
-                    this.style.display = 'none';
-                    alert('Could not load image. Please check the URL.');
-                };
-            }
-        }
-
-        // Save post
-        async function savePost(event, isEdit) {
+        // Save FAQ
+        async function saveFAQ(event, isEdit) {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
             
-            const post = {
-                id: formData.get('id') || 'post-' + Date.now(),
-                title: formData.get('title'),
-                slug: formData.get('slug'),
-                excerpt: formData.get('excerpt'),
-                content: formData.get('content'),
-                image: formData.get('image'),
-                author: formData.get('author'),
-                date: formData.get('date')
+            const faq = {
+                id: formData.get('id') || 'faq-' + Date.now(),
+                question: formData.get('question'),
+                answer: formData.get('answer'),
+                category: formData.get('category'),
+                order: parseInt(formData.get('order'))
             };
 
             if (isEdit) {
-                const index = blogPosts.findIndex(p => p.id === post.id);
-                blogPosts[index] = post;
+                const index = faqData.findIndex(f => f.id === faq.id);
+                faqData[index] = faq;
             } else {
-                blogPosts.unshift(post);
+                faqData.push(faq);
             }
 
-            const saved = await saveBlogData();
+            const saved = await saveFAQData();
             if (saved) {
-                showMessage('Blog post saved successfully!', 'success');
-                cancelPostForm();
-                await loadBlogData();
-                renderBlogGrid();
-                loadPostsAdmin();
+                showMessage('FAQ saved successfully!', 'success');
+                cancelFAQForm();
+                await loadFAQData();
+                renderFAQ();
+                renderCategories();
+                loadFAQAdmin();
             } else {
-                showMessage('Error saving post. Please try again.', 'error');
+                showMessage('Error saving FAQ. Please try again.', 'error');
             }
         }
 
-        // Edit post
-        function editPost(post) {
-            const form = document.getElementById('addPostForm');
+        // Edit FAQ
+        function editFAQ(faq) {
+            const form = document.getElementById('addFAQForm');
             form.style.display = 'block';
-            form.innerHTML = generatePostForm(post);
+            form.innerHTML = generateFAQForm(faq);
             form.scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Delete post
-        async function deletePost(id) {
-            if (!confirm('Are you sure you want to delete this blog post?')) return;
+        // Delete FAQ
+        async function deleteFAQ(id) {
+            if (!confirm('Are you sure you want to delete this FAQ?')) return;
             
-            blogPosts = blogPosts.filter(p => p.id !== id);
-            const saved = await saveBlogData();
+            faqData = faqData.filter(f => f.id !== id);
+            const saved = await saveFAQData();
             
             if (saved) {
-                showMessage('Blog post deleted successfully!', 'success');
-                await loadBlogData();
-                renderBlogGrid();
-                loadPostsAdmin();
+                showMessage('FAQ deleted successfully!', 'success');
+                await loadFAQData();
+                renderFAQ();
+                renderCategories();
+                loadFAQAdmin();
             } else {
-                showMessage('Error deleting post. Please try again.', 'error');
+                showMessage('Error deleting FAQ. Please try again.', 'error');
             }
         }
 
         // Cancel form
-        function cancelPostForm() {
-            document.getElementById('addPostForm').style.display = 'none';
+        function cancelFAQForm() {
+            document.getElementById('addFAQForm').style.display = 'none';
         }
 
         // Show message
@@ -1215,24 +952,4 @@
             messageDiv.textContent = text;
             messageDiv.style.display = 'block';
             
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
-        }
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', initBlog);
-
-        // Handle browser back button
-        window.addEventListener('popstate', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const postSlug = urlParams.get('post');
-            if (postSlug) {
-                showPost(postSlug);
-            } else {
-                backToBlog();
-            }
-        });
-    </script>
-</body>
-</html>
+            se

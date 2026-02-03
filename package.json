@@ -1,0 +1,17 @@
+{
+  "name": "atlanta-porta-potty-reviews",
+  "version": "1.0.0",
+  "description": "Atlanta Metro Porta Potty Review Site with Admin Panel",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build required'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.15.1"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
